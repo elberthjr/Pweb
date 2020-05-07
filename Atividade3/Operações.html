@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Atividade 3</title>
+   Numero 1 <input id="num1" type="number"> <br />
+   Numero 2 <input id="num2" type="number"> <br />
+   <button onclick="calc()">Calcular</button>
+
+   <script type="text/javascript">
+
+    function calc(){
+     var num1 = parseFloat(document.getElementById("num1").value);
+     var num2 = parseFloat(document.getElementById("num2").value);
+     
+     var soma = (num1 + num2);
+     var sub = (num1 - num2);
+     var prod = (num1 * num2);
+     var div = (num1 / num2);
+     var res = (num1 % num2);  
+
+     alert("Soma: "+ soma +
+           "Subtração: "+ sub +
+           "Produto: " + prod +
+           "Divisão: " + div +
+           "Resto: " + res );
+     
+    }
+ </script>
+
+ </head>
+</html>
