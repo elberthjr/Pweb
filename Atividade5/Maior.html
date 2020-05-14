@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Atividade 5</title>
+   Primeiro Numero <input id="num1" type="number"> <br />
+   Segundo Numero <input id="num2" type="number"> <br />
+   Terceiro Numero <input id="num3" type="number"> <br />
+   <button onclick="maior()">Mostrar o Maior</button>
+
+   <script type="text/javascript">
+
+    function maior(){
+        var num1 = parseFloat(document.getElementById("num1").value);
+        var num2 = parseFloat(document.getElementById("num2").value);
+        var num3 = parseFloat(document.getElementById("num3").value);
+            
+        var maior = num1;
+
+        if(num2 > maior)
+        maior = num2;
+        if(num3 > maior)
+        maior = num3;
+
+       alert("Maior: "+maior);
+    }
+   
+ </script>
+
+ </head>
+</html>
