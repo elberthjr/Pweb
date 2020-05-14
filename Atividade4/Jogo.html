@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body> 
+    <script>
+        var user, pc, num, result, p;
+        
+        p = prompt("Escolha entre PEDRA, PAPEL, TESOURA\nEscolha Sua Opção: ");
+        user = p.toUpperCase();
+        num = Math.random();        
+        alert("É a vez do adversário ")
+        
+        if(num < 0.4)
+            pc = "PEDRA";
+        else if(num < 0.6)
+            pc = "PAPEL";
+        else
+            pc = "TESOURA";
+        
+       if(pc === user){
+           result = "Empatou!!";
+       }            
+        else if((user === "PEDRA" && pc === "TESOURA") || 
+                (user === "TESOURA" && pc === "PAPEL") || 
+                (user === "PAPEL" && pc === "PEDRA")){
+            result = "Você Venceu!!!";
+        }            
+        else{
+            result = "Computador ganhou!";
+        }
+            
+            
+        alert("Você escolheu " + user + "\nO computador escolheu  " + pc + "\n\n\t\tresult FINAL\n" + result);
+        
+    </script>   
+</body>
+</html>
