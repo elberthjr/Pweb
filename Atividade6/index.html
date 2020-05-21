@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Atividade 6</title>
+</head>
+<body>
+    <script>
+        //Usando construtor
+        
+        var Aluno1 = new Object();
+        Aluno1.RA = "0030482151007";
+        Aluno1.Nome = "Elberth Junior"        
+
+        alert(Aluno1.RA + ": " + Aluno1.Nome);
+
+        //Usando forma literal
+        var Aluno2 = {            
+            RA: "0030482151008",
+            Nome: "Elberth Silva",
+        };
+
+        alert(Aluno2.RA + ": " + Aluno2.Nome);
+
+       
+        var Aluno3 = {};
+        var campoRA = 'RA';
+        var campoNome = "Nome";
+        
+        Aluno3 [campoRA] = "0030482151009";
+        Aluno3 [campoNome] = "Elberth Aparecido";
+
+        alert(Aluno3.RA + ": " + Aluno3.Nome);
+        
+    </script>    
+</body>
+</html>

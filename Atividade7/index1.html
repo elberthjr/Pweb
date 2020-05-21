@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Atividade 7.2</title>
+</head>
+<body>
+	<script>
+		function Conta() {
+      var correntista;
+      var banco;
+      var numConta;
+      var saldo;
+
+      this.setCorrentista = function(correntista) {this.correntista = correntista};
+      this.setBanco = function(banco) {this.banco = banco};
+      this.setNumConta = function(numConta) {this.numConta = numConta};
+      this.setSaldo = function(saldo) {this.saldo = saldo};
+
+      this.getCorrentista = function() {return this.correntista};
+      this.getBanco = function() {return this.banco};
+      this.getNumConta = function() {return this.numConta};
+      this.getSaldo = function() {return this.saldo};
+	};
+
+    function Corrente(){
+      var saldoEspecial;
+      this.setSaldoEspecial = function(saldoEspecial) {this.saldoEspecial = saldoEspecial};
+      this.getSaldoEspecial = function() {return this.saldoEspecial};
+    }
+
+    function Poupanca(){
+      var juros;
+      var dtVenc;
+      this.setJuros = function(juros) {this.juros = juros};
+      this.getJuros = function() {return this.juros};
+
+      this.setDtVenc = function(dtVenc) {this.dtVenc = dtVenc};
+      this.getDtVenc = function() {return this.dtVenc};
+    }
+
+    Corrente.prototype = new Conta();
+    Poupanca.prototype = new Conta();
+
+    var ctCorrente = new Corrente();
+    var ctPoupanca = new Poupanca();
+
+    ctCorrente.setCorrentista('Elberth Junior');
+    ctCorrente.setBanco('529');
+    ctCorrente.setNumConta('07745');
+    ctCorrente.setSaldo(0);
+    ctCorrente.setSaldoEspecial(2000);
+
+    ctPoupanca.setCorrentista('Daniela Moraes');
+    ctPoupanca.setBanco('774');
+    ctPoupanca.setNumConta('54770');
+    ctPoupanca.setSaldo(1000);
+    ctPoupanca.setJuros(0.20);
+    ctPoupanca.setDtVenc('29/08/2020');
+
+    console.log('Conta corrente\nCorrentista: ' + ctCorrente.getCorrentista() + '\nBanco: ' + ctCorrente.getBanco() + '\nNúm. Conta:' + ctCorrente.getNumConta() + '\nSaldo: ' + ctCorrente.getSaldo() + '\nSaldo Especial: ' + ctCorrente.getSaldoEspecial());
+
+    console.log('\nConta corrente\nCorrentista: ' + ctPoupanca.getCorrentista() + '\nBanco: ' + ctPoupanca.getBanco() + '\nNúm. Conta:' + ctPoupanca.getNumConta() + '\nSaldo: ' + ctPoupanca.getSaldo() + '\nJuros: ' + ctPoupanca.getJuros() + '\nData Vencimento: ' + ctPoupanca.getDtVenc());
+	</script>
+
+</body>
+
+</html>

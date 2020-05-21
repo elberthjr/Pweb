@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Atividade 7.1</title>
+</head>
+<body>
+	<script>
+		function Ret(x, y) {
+			this.base = x;
+			this.altura = y;
+      this.calcArea = () => {
+        return (this.base * this.altura / 2);
+      };
+		};
+
+    var retang = new Ret(10, 2);
+    var area = retang.calcArea();
+    console.log(area);
+	</script>
+</body>
+</html>
