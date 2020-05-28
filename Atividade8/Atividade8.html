@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abra a Janela</title>
+</head>
+<body>
+    <script>
+        function wOpen(){
+            var fig = document.getElementById("figura").src="Imagens/janelaAberta.jpg";
+            var fig = document.getElementById("legenda").textContent = "Janela Aberta";
+        }
+        function wClose(){
+            var fig = document.getElementById("figura").src="Imagens/janelaFechada.png";
+            var fig = document.getElementById("legenda").textContent = "Janela Fechada";
+        }
+        function wBroken(){
+            var fig = document.getElementById("figura").src="Imagens/janelaQuebrada.jpg";
+            var fig = document.getElementById("legenda").textContent = "Janela Quebrada";
+        }
+    </script>
+    <figure>
+        <img id="figura" src="Imagens/janelaFechada.png" alt="Figua de uma janela fechada" onmousemove="wOpen()" onmouseout="wClose()"  onclick="wBroken()">
+        <figurecapition>
+            <p id="legenda">Janela Fechada</p>
+        </figurecapition>
+    </figure>
+</body>
+</html>
