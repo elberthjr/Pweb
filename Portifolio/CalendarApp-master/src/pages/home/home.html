@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Calendário Escolar</ion-title>
+    <ion-buttons end>
+    </ion-buttons>    
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <h3>{{ viewTitle }}</h3>
+
+
+  <calendar [eventSource]="eventSource" 
+  [calendarMode]="calendar.mode"
+  [currentDate]="calendar.currentDate"
+  (onEventSelected)="onEventSelected($event)"
+  (onTitleChanged)="onViewTitleChanged($event)"
+  (onTimeSelected)="onTimeSelected($event)"
+  step="30"
+  class="calendar">
+  </calendar>
+ 
+  <ion-fab bottom right>
+    <button ion-fab color="primary" (click)="addEvent()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>
