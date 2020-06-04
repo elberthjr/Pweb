@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Bem vindo</h1>
+
+
+<form>
+  <label for="cursos">Escolha um curso:</label>
+  <select name="cursos" id="cursos" onchange="carregaCurso(this)">
+    <option value="Ads">Análise e Desenvolvimento de Sistemas</option>
+    <option value="Ele">Eletrônica Automotiva</option>
+    <option value="Fab">Fabricação Mecânica</option>
+    <option value="Log">Logística</option>
+    <option value="Man">Manufatura Avançada</option>
+    <option value="Prm">Processos Metalúrgicos</option>
+    <option value="Pol">Polímeros</option>
+    <option value="Prj">Projetos Mecânicos</option>
+    <option value="Sis">Sistemas Biomédicos</option>
+  </select>
+</form>
+
+<script>
+  function carregaCurso(object){
+    var value = object.value;
+    var op = confirm("Quer ver esse curso?");
+    if (op == true){
+      window.open('file:./descricao.html#'+value,'', 'height=500, width=250');
+    }
+  }
+</script>
+</body>
+</html
