@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	
+	<session-factory>
+			<!-- configuração da conexao com o banco Derby e dialeto (como convera 
+			com o banco) -->
+		<property name="hibernate.dialect">org.hibernate.dialect.DerbyTenFiveDialect</property>
+		<property name="connection.driver_class">org.apache.derby.jdbc.ClientDriver</property>
+		<property name="connection.url">jdbc:derby://localhost:1527/agenda;create=true</property>
+		<property name="hibernate.connection.username">app</property>
+		<property name="hibernate.connection.password">app</property>
+		
+		<!-- Mapeando classes -->
+		<mapping class="br.fatec.exercicio7.crudannotations.ContatoAnnotations" />
+	</session-factory>
+</hibernate-configuration>
